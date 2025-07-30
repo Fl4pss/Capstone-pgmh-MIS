@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>Peninsula Garden</title>
+</head>
+
+<body>
+    <!--header-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                Peninsula Garden <i class='bx bxs-home'></i>
+            </a>
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class='bx bx-home-alt-2'></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class='bx bx-phone'></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#request-visit" class="nav__link">
+                            <i class='bx bx-phone'></i>
+                            <span>Visit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <i class='bx bx-moon change-theme' id="theme-button"></i>
+
+            <a href="#" class="button nav__button" data-bs-toggle="modal" data-bs-target="#loginModal">
+                Log in
+            </a>
+
+        </nav>
+    </header>
+    <!--main-->
+    <main class="main">
+        <!--HOME-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h1 class="home__title">
+                        Peninsula Garden<br> Midtown <br> Homes
+                    </h1>
+                    <p class="home__description">
+                        Peninsula Garden Midtown Homes is a kid-friendly residential condominium community designed to
+                        give a 100% safe and nurturing home for you and your children. Half of the property is dedicated
+                        to a huge garden for great outdoor adventures and relaxation. The community also offers
+                        multi-purpose halls, gym, swimming pool, daycare center, playground, meditation garden,
+                        clubhouse and more.
+                    </p>
+                </div>
+                <!--HOME IMG-->
+
+                <div class="wrapper">
+                    <img src="assets/img/carousel2.jpg" />
+                </div>
+            </div>
+        </section>
+
+        </section>
+
+        <!--POPULAR-->
+
+        <!--value-->
+
+
+        <!--contact-->
+        <section class="contact section" id="contact">
+            <div class="contact__container container grid">
+                <div class="contact__content">
+                    <div class="contact__data">
+                        <span class="section__subtitle">Contact Us</span>
+                        <h2 class="section__title">
+                            Easy to Contact us<span>.</span>
+                        </h2>
+                        <p class="contact__description">
+                            Is there a problem finding you dream home? Need a
+                            guide in buying first home? or need a consultation on resedential issues? just contact us.
+                        </p>
+                        <a href="#" class="button contact__button" data-bs-toggle="modal"
+                            data-bs-target="#contactModal">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <img src="assets/img/carousel3.jpg" />
+                </div>
+            </div>
+        </section>
+        <!-- Request a Visit Section -->
+        <section class="request-visit section py-5" id="request-visit">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section__subtitle">Visitor Request</span>
+                    <h2 class="section__title">Request a Visit</h2>
+                </div>
+
+                <div class="row justify-content-center">
+                    <!-- Visit Request Form -->
+                    <div class="col-lg-6">
+                        <form action="submit_visit_request.php" method="POST" class="p-4 border rounded-3 shadow-sm">
+                            <div class="mb-3">
+                                <label for="visitor_name" class="form-label">Visitor Name:</label>
+                                <input type="text" class="form-control" id="visitor_name" name="visitor_name" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="visitor_email" class="form-label">Visitor Email:</label>
+                                <input type="email" class="form-control" id="visitor_email" name="visitor_email"
+                                    required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="contact_number" class="form-label">Contact Number:</label>
+                                <input type="text" class="form-control" id="contact_number" name="contact_number"
+                                    required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="resident_name" class="form-label">Resident Name:</label>
+                                <input type="text" class="form-control" id="resident_name" name="resident_name"
+                                    required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="visit_date" class="form-label">Visit Date:</label>
+                                <input type="date" class="form-control" id="visit_date" name="visit_date" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="visit_time" class="form-label">Visit Time:</label>
+                                <input type="time" class="form-control" id="visit_time" name="visit_time" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="purpose_of_visit" class="form-label">Purpose of Visit:</label>
+                                <textarea class="form-control" id="purpose_of_visit" name="purpose_of_visit" rows="3"
+                                    required></textarea>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Submit Visit Request</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Success Modal for Visit Request -->
+        <div class="modal fade" id="visitSuccessModal" tabindex="-1" aria-labelledby="visitSuccessModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="visitSuccessModalLabel">Visit Request Submitted</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Your visit request has been successfully submitted! The resident will get back to you soon.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error Modal for Visit Request -->
+        <div class="modal fade" id="visitErrorModal" tabindex="-1" aria-labelledby="visitErrorModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="visitErrorModalLabel">Error</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        There was an error submitting your visit request. Please try again.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--subscribe-->
+        <section class="subscribe section" id="subscribe">
+            <div class="subscribe__container container">
+                <h1 class="subscribe__title">
+                    Get Started with peninsula garden
+                </h1>
+                <p class="subscribe__description">
+                    Subscribe and find super attractive price
+                    quotes from us, Find your residence soon
+                </p>
+                <a href="" class="button subscribe__button">
+                    Get Started
+                </a>
+            </div>
+        </section>
+
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Resident Login</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Resident Login Form -->
+                        <form action="login.php" method="POST" class="login-form" id="login-form">
+                            <div class="mb-3">
+                                <label for="loginEmail" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="loginEmail" name="loginEmail" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="loginPassword" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="loginPassword" name="loginPassword" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Log in</button>
+                            <p>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">Forgot Password?</a>
+                            </p>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <!--footer-->
+
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class='bx bx-chevrons-up'></i>
+    </a>
+
+    <!--scroll reveal-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--swiper js-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+
+
+    <!-- Error Modal -->
+    <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="errorModalLabel">Login Failed</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Incorrect username or password. Please try again.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Error Modal -->
+    <div class="modal fade" id="loginErrorModal" tabindex="-1" aria-labelledby="loginErrorModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginErrorModalLabel">Login Failed</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Incorrect username or password. Please try again.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Contact Us Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="fullName" name="fullName"
+                                placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactNumber" class="form-label">Contact Number</label>
+                            <input type="text" class="form-control" id="contactNumber" name="contactNumber"
+                                placeholder="Enter your contact number">
+                        </div>
+                        <!-- Dropdown for Subject Field -->
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <select class="form-select" id="subject" name="subject" required>
+                                <option value="" disabled selected>Select a subject</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                                <option value="Support">Support</option>
+                                <option value="Sales">Sales</option>
+                                <option value="Feedback">Feedback</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <!-- Optional field for 'Other' subject -->
+                        <div class="mb-3" id="otherSubjectField" style="display:none;">
+                            <label for="otherSubject" class="form-label">Other Subject</label>
+                            <input type="text" class="form-control" id="otherSubject" name="otherSubject"
+                                placeholder="Please specify the subject">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="3"
+                                placeholder="Your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="successModalLabel">Success</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Form has been successfully sent!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Forgot Password Modal -->
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="forgotPasswordModalLabel">Forgot Password</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="forgetpassword.php" method="POST" id="forgotPasswordForm">
+                        <div class="mb-3">
+                            <label for="forgotEmail" class="form-label">Enter your email address</label>
+                            <input type="email" class="form-control" id="forgotEmail" name="forgotEmail" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
